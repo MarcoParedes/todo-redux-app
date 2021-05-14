@@ -8,10 +8,9 @@ import { contadorReducer } from "src/app/contador/contador.reducer";
 
 import { environment } from "src/environments/environment";
 
-import { HijoComponent } from './contador/hijo/hijo.component';
 import { AppComponent } from './app.component';
+import { HijoComponent } from './contador/hijo/hijo.component';
 import { NietoComponent } from './contador/nieto/nieto.component';
-import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { reducers, metaReducers } from './reducers';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
-    }),
-    StoreModule.forRoot(reducers, { metaReducers })
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
